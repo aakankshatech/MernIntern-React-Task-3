@@ -1,21 +1,19 @@
-// App.js
+
 import React from 'react';
-import Header from './Components/Header';
-import AboutMe from './Components/AboutMe';
-// import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ColorPicker from './Components/ColorPicker';
 
 function App() {
+  const colors = ['#FF5733', '#33FF57', '#5733FF', '#FFFF33', '#33FFFF'];
+
   return (
-    <div className="App">
-      <Header />
-      <AboutMe />
-      <Contact />
-      <Footer />
+    <div class="background d-flex flex-column justify-content-center align-items-center">
+      <h1>Color Picker</h1>
+      <ColorPicker colors={colors} />
     </div>
   );
 }
 
 export default App;
+
